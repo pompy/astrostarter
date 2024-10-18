@@ -12,3 +12,6 @@ npm create astro@latest -- --template astrobasic
 
 
 https://docs.astro.build/en/install-and-setup/
+
+npm run build
+node dist/server/entry.mjs
