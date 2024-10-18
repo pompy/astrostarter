@@ -1,4 +1,31 @@
 ---
 const { dynamicname} = Astro.params;
+
+export function getStaticPaths() {
+
+const pages = [
+{
+    dynamicname: "ravi",
+ title: "ravi title",
+},
+{
+    dynamicname: "somdutt",
+ title: "somdutt title",
+},
+];
+
+
+return pages.map(({ dynamicname, title }) => {
+return {
+ params: { dynamicname },
+ props: { title },
+};
+});
+
+
+}
+
 ---
+
+
 <h1>{dynamicname} is called</h1>

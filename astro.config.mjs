@@ -7,10 +7,11 @@ import node from '@astrojs/node';
 
 
 // https://astro.build/config
+// output server .. output static
 export default defineConfig({
   integrations: [tailwind(), react()] ,
-   output: 'server', adapter: node({
+   output: 'static', adapter: node({
     mode: 'standalone'
   }),
-base: '/docs'
+base: '/docs/',
 });
